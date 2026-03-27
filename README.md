@@ -34,12 +34,12 @@ The 20 modules and 5 portfolio projects translate into concrete, demonstrable ca
 
 | Capability | Modules | Demonstrated In | What It Means |
 |------------|---------|-----------------|---------------|
-| **Build LLM classification pipelines with structured clinical output** | 01, 02, 04 | [clinical-note-classifier](https://github.com/kavoshmonfared/clinical-note-classifier) | Take a free-text clinical note, produce validated JSON with urgency level, ICD-10 codes, and reasoning trail. Production-grade error handling with safety-first fallbacks. |
-| **Build RAG systems over sensitive clinical documents** | 05, 06 | [mental-health-rag](https://github.com/kavoshmonfared/mental-health-rag) | Ingest therapy transcripts, retrieve relevant sessions by clinical similarity, generate structured summaries with risk assessment and anti-hallucination guardrails. |
-| **Build FHIR-compliant data pipelines from unstructured clinical text** | 07, 12, 13 | [clinical-intake-pipeline](https://github.com/kavoshmonfared/clinical-intake-pipeline) | Multi-agent system that reads a raw clinical note and outputs a validated FHIR R4 Bundle with Patient, Condition, MedicationStatement, and AllergyIntolerance resources. |
-| **Build automated evaluation frameworks for clinical AI** | 08, 09, 10, 11 | [clinical-eval-framework](https://github.com/kavoshmonfared/clinical-eval-framework) | Score LLM-generated clinical outputs on accuracy, safety, completeness, and appropriateness using LLM-as-judge with domain-specific rubrics. Detect regressions across prompt versions. |
-| **Build CI/CD pipelines with LLM evaluation gates** | 15, 16, 17, 18 | [clinical-ai-cicd](https://github.com/kavoshmonfared/clinical-ai-cicd) | GitHub Actions workflow that blocks PR merges when clinical quality drops. Prompt changes are versioned, tested, and evaluated like code changes. |
-| **Evaluate cost/quality tradeoffs across LLM providers** | 14, 17, 18 | [clinical-ai-cicd](https://github.com/kavoshmonfared/clinical-ai-cicd) | Benchmark local models (Ollama) against cloud APIs, track cost per clinical classification, and make data-driven model selection decisions. |
+| **Build LLM classification pipelines with structured clinical output** | 01, 02, 04 | [clinical-note-classifier](https://github.com/kavoshm/clinical-note-classifier) | Take a free-text clinical note, produce validated JSON with urgency level, ICD-10 codes, and reasoning trail. Production-grade error handling with safety-first fallbacks. |
+| **Build RAG systems over sensitive clinical documents** | 05, 06 | [mental-health-rag](https://github.com/kavoshm/mental-health-rag) | Ingest therapy transcripts, retrieve relevant sessions by clinical similarity, generate structured summaries with risk assessment and anti-hallucination guardrails. |
+| **Build FHIR-compliant data pipelines from unstructured clinical text** | 07, 12, 13 | [clinical-intake-pipeline](https://github.com/kavoshm/clinical-intake-pipeline) | Multi-agent system that reads a raw clinical note and outputs a validated FHIR R4 Bundle with Patient, Condition, MedicationStatement, and AllergyIntolerance resources. |
+| **Build automated evaluation frameworks for clinical AI** | 08, 09, 10, 11 | [clinical-eval-framework](https://github.com/kavoshm/clinical-eval-framework) | Score LLM-generated clinical outputs on accuracy, safety, completeness, and appropriateness using LLM-as-judge with domain-specific rubrics. Detect regressions across prompt versions. |
+| **Build CI/CD pipelines with LLM evaluation gates** | 15, 16, 17, 18 | [clinical-ai-cicd](https://github.com/kavoshm/clinical-ai-cicd) | GitHub Actions workflow that blocks PR merges when clinical quality drops. Prompt changes are versioned, tested, and evaluated like code changes. |
+| **Evaluate cost/quality tradeoffs across LLM providers** | 14, 17, 18 | [clinical-ai-cicd](https://github.com/kavoshm/clinical-ai-cicd) | Benchmark local models (Ollama) against cloud APIs, track cost per clinical classification, and make data-driven model selection decisions. |
 
 ---
 
@@ -48,46 +48,46 @@ The 20 modules and 5 portfolio projects translate into concrete, demonstrable ca
 ### Phase 1: LLM Foundations (Weeks 1--3)
 | # | Module | Description | Applied In |
 |---|--------|-------------|------------|
-| 01 | [Prompt Engineering](01-prompt-engineering/) | System prompts, few-shot, chain-of-thought, output formatting | [clinical-note-classifier](https://github.com/kavoshmonfared/clinical-note-classifier) -- chain-of-thought triage, few-shot ICD-10 coding |
-| 02 | [Building Systems with LLMs](02-building-systems/) | Chained prompts, classification pipelines, moderation layers | [clinical-note-classifier](https://github.com/kavoshmonfared/clinical-note-classifier) -- multi-step classification with safety fallbacks |
-| 03 | [LangChain Development](03-langchain/) | Chains, memory, basic agents | [mental-health-rag](https://github.com/kavoshmonfared/mental-health-rag) -- LangChain document loaders and retrieval chains |
-| 04 | [LCEL (LangChain Expression Language)](04-lcel/) | Declarative chains, parallel execution, streaming | [clinical-intake-pipeline](https://github.com/kavoshmonfared/clinical-intake-pipeline) -- declarative chain composition in agent nodes |
+| 01 | [Prompt Engineering](https://github.com/kavoshm/prompt-engineering) | System prompts, few-shot, chain-of-thought, output formatting | [clinical-note-classifier](https://github.com/kavoshm/clinical-note-classifier) -- chain-of-thought triage, few-shot ICD-10 coding |
+| 02 | [Building Systems with LLMs](https://github.com/kavoshm/building-systems) | Chained prompts, classification pipelines, moderation layers | [clinical-note-classifier](https://github.com/kavoshm/clinical-note-classifier) -- multi-step classification with safety fallbacks |
+| 03 | [LangChain Development](https://github.com/kavoshm/langchain) | Chains, memory, basic agents | [mental-health-rag](https://github.com/kavoshm/mental-health-rag) -- LangChain document loaders and retrieval chains |
+| 04 | [LCEL (LangChain Expression Language)](https://github.com/kavoshm/lcel) | Declarative chains, parallel execution, streaming | [clinical-intake-pipeline](https://github.com/kavoshm/clinical-intake-pipeline) -- declarative chain composition in agent nodes |
 
 ### Phase 2: RAG Pipelines (Weeks 4--6)
 | # | Module | Description | Applied In |
 |---|--------|-------------|------------|
-| 05 | [RAG Fundamentals](05-rag-fundamentals/) | Document loading, text splitting, vector store basics | [mental-health-rag](https://github.com/kavoshmonfared/mental-health-rag) -- dialogue-aware chunking, ChromaDB ingestion |
-| 06 | [Advanced RAG](06-advanced-rag/) | Sentence window retrieval, auto-merge, RAG triad evaluation | [mental-health-rag](https://github.com/kavoshmonfared/mental-health-rag) -- risk-focused retrieval, metadata filtering |
-| 07 | [FHIR R4 for AI](07-fhir-r4/) | Healthcare data standards, LLM-to-FHIR mapping, validation | [clinical-intake-pipeline](https://github.com/kavoshmonfared/clinical-intake-pipeline) -- FHIR R4 Bundle generation with ICD-10/SNOMED coding |
+| 05 | [RAG Fundamentals](https://github.com/kavoshm/rag-fundamentals) | Document loading, text splitting, vector store basics | [mental-health-rag](https://github.com/kavoshm/mental-health-rag) -- dialogue-aware chunking, ChromaDB ingestion |
+| 06 | [Advanced RAG](https://github.com/kavoshm/advanced-rag) | Sentence window retrieval, auto-merge, RAG triad evaluation | [mental-health-rag](https://github.com/kavoshm/mental-health-rag) -- risk-focused retrieval, metadata filtering |
+| 07 | [FHIR R4 for AI](https://github.com/kavoshm/fhir-r4) | Healthcare data standards, LLM-to-FHIR mapping, validation | [clinical-intake-pipeline](https://github.com/kavoshm/clinical-intake-pipeline) -- FHIR R4 Bundle generation with ICD-10/SNOMED coding |
 
 ### Phase 3: Evaluation (Weeks 7--9)
 | # | Module | Description | Applied In |
 |---|--------|-------------|------------|
-| 08 | [Evaluation & Debugging](08-eval-debugging/) | Eval patterns, tracing, systematic debugging | [clinical-eval-framework](https://github.com/kavoshmonfared/clinical-eval-framework) -- evaluation pipeline architecture |
-| 09 | [G-Eval Paper Implementation](09-g-eval/) | LLM-as-judge, clinical criteria, probability-weighted scoring | [clinical-eval-framework](https://github.com/kavoshmonfared/clinical-eval-framework) -- 4-rubric LLM-as-judge with CoT scoring |
-| 10 | [RAGAS Framework](10-ragas/) | RAG evaluation metrics, custom metrics, benchmarking | [clinical-eval-framework](https://github.com/kavoshmonfared/clinical-eval-framework) -- retrieval quality metrics for RAG outputs |
-| 11 | [Prompt Versioning](11-prompt-versioning/) | Version management, diff tools, regression tracking | [clinical-ai-cicd](https://github.com/kavoshmonfared/clinical-ai-cicd) -- baseline versioning and regression detection |
+| 08 | [Evaluation & Debugging](https://github.com/kavoshm/eval-debugging) | Eval patterns, tracing, systematic debugging | [clinical-eval-framework](https://github.com/kavoshm/clinical-eval-framework) -- evaluation pipeline architecture |
+| 09 | [G-Eval Paper Implementation](https://github.com/kavoshm/g-eval) | LLM-as-judge, clinical criteria, probability-weighted scoring | [clinical-eval-framework](https://github.com/kavoshm/clinical-eval-framework) -- 4-rubric LLM-as-judge with CoT scoring |
+| 10 | [RAGAS Framework](https://github.com/kavoshm/ragas) | RAG evaluation metrics, custom metrics, benchmarking | [clinical-eval-framework](https://github.com/kavoshm/clinical-eval-framework) -- retrieval quality metrics for RAG outputs |
+| 11 | [Prompt Versioning](https://github.com/kavoshm/prompt-versioning) | Version management, diff tools, regression tracking | [clinical-ai-cicd](https://github.com/kavoshm/clinical-ai-cicd) -- baseline versioning and regression detection |
 
 ### Phase 4: Agentic Systems (Weeks 10--12)
 | # | Module | Description | Applied In |
 |---|--------|-------------|------------|
-| 12 | [Agentic Fundamentals](12-agentic-fundamentals/) | Function calling, custom tools, ReAct agents | [clinical-intake-pipeline](https://github.com/kavoshmonfared/clinical-intake-pipeline) -- specialized extraction and validation agents |
-| 13 | [LangGraph](13-langgraph/) | State graphs, conditional routing, human-in-the-loop | [clinical-intake-pipeline](https://github.com/kavoshmonfared/clinical-intake-pipeline) -- state graph with ambiguity-driven human review |
-| 14 | [Ollama Benchmark](14-ollama-benchmark/) | Local model benchmarking, latency comparison | [clinical-ai-cicd](https://github.com/kavoshmonfared/clinical-ai-cicd) -- model selection data for cost/quality tradeoffs |
+| 12 | [Agentic Fundamentals](https://github.com/kavoshm/agentic-fundamentals) | Function calling, custom tools, ReAct agents | [clinical-intake-pipeline](https://github.com/kavoshm/clinical-intake-pipeline) -- specialized extraction and validation agents |
+| 13 | [LangGraph](https://github.com/kavoshm/langgraph) | State graphs, conditional routing, human-in-the-loop | [clinical-intake-pipeline](https://github.com/kavoshm/clinical-intake-pipeline) -- state graph with ambiguity-driven human review |
+| 14 | [Ollama Benchmark](https://github.com/kavoshm/ollama-benchmark) | Local model benchmarking, latency comparison | [clinical-ai-cicd](https://github.com/kavoshm/clinical-ai-cicd) -- model selection data for cost/quality tradeoffs |
 
 ### Phase 5: LLMOps (Weeks 13--15)
 | # | Module | Description | Applied In |
 |---|--------|-------------|------------|
-| 15 | [LLMOps Course](15-llmops-course/) | Pipeline versioning, automated testing, deployment patterns | [clinical-ai-cicd](https://github.com/kavoshmonfared/clinical-ai-cicd) -- GitHub Actions evaluation workflow |
-| 16 | [LangSmith Tracing](16-langsmith-tracing/) | Trace decorators, trace analysis, debug workflows | [clinical-eval-framework](https://github.com/kavoshmonfared/clinical-eval-framework) -- trace-level debugging of eval scoring |
-| 17 | [Cost & Latency Tracking](17-cost-tracking/) | Token tracking, cost calculation, dashboards | [clinical-ai-cicd](https://github.com/kavoshmonfared/clinical-ai-cicd) -- per-run cost tracking in CI pipeline |
-| 18 | [Provider Framework](18-provider-framework/) | Multi-provider benchmarking, cost analysis | [clinical-ai-cicd](https://github.com/kavoshmonfared/clinical-ai-cicd) -- model comparison data for baseline decisions |
+| 15 | [LLMOps Course](https://github.com/kavoshm/llmops-course) | Pipeline versioning, automated testing, deployment patterns | [clinical-ai-cicd](https://github.com/kavoshm/clinical-ai-cicd) -- GitHub Actions evaluation workflow |
+| 16 | [LangSmith Tracing](https://github.com/kavoshm/langsmith-tracing) | Trace decorators, trace analysis, debug workflows | [clinical-eval-framework](https://github.com/kavoshm/clinical-eval-framework) -- trace-level debugging of eval scoring |
+| 17 | [Cost & Latency Tracking](https://github.com/kavoshm/cost-tracking) | Token tracking, cost calculation, dashboards | [clinical-ai-cicd](https://github.com/kavoshm/clinical-ai-cicd) -- per-run cost tracking in CI pipeline |
+| 18 | [Provider Framework](https://github.com/kavoshm/provider-framework) | Multi-provider benchmarking, cost analysis | [clinical-ai-cicd](https://github.com/kavoshm/clinical-ai-cicd) -- model comparison data for baseline decisions |
 
 ### Phase 6: Portfolio & Interview Prep (Weeks 16--18)
 | # | Module | Description | Applied In |
 |---|--------|-------------|------------|
-| 19 | [Portfolio Materials](19-portfolio/) | Blog post, project READMEs, cert study notes, GitHub profile | All 5 repos -- architecture diagrams, documentation, blog post |
-| 20 | [Interview Preparation](20-interview-prep/) | Resume defense, technical Q&A, behavioral, system design | Cross-cutting -- system design scenarios drawn from all projects |
+| 19 | [Portfolio Materials](https://github.com/kavoshm/portfolio) | Blog post, project READMEs, cert study notes, GitHub profile | All 5 repos -- architecture diagrams, documentation, blog post |
+| 20 | [Interview Preparation](https://github.com/kavoshm/interview-prep) | Resume defense, technical Q&A, behavioral, system design | Cross-cutting -- system design scenarios drawn from all projects |
 
 ---
 
@@ -97,11 +97,11 @@ Five standalone repositories were built during this roadmap, each applying the s
 
 | Project | Repository | Phase | What It Does |
 |---------|-----------|-------|--------------|
-| **Clinical Note Classifier** | [clinical-note-classifier](https://github.com/kavoshmonfared/clinical-note-classifier) | 1 | LLM-powered triage classification with chain-of-thought reasoning, few-shot prompting, and structured JSON output |
-| **Mental Health RAG** | [mental-health-rag](https://github.com/kavoshmonfared/mental-health-rag) | 2 | RAG system for querying clinical treatment protocols with citation-backed answers, ChromaDB retrieval, and FastAPI |
-| **Clinical Eval Framework** | [clinical-eval-framework](https://github.com/kavoshmonfared/clinical-eval-framework) | 3 | Automated quality scoring for LLM clinical outputs using G-Eval with 4 rubrics, baseline management, and regression detection |
-| **Agentic Intake Pipeline** | [clinical-intake-pipeline](https://github.com/kavoshmonfared/clinical-intake-pipeline) | 4 | Multi-agent extraction from clinical notes to FHIR R4 resources using LangGraph with human-in-the-loop validation |
-| **Clinical AI CI/CD** | [clinical-ai-cicd](https://github.com/kavoshmonfared/clinical-ai-cicd) | 5 | CI/CD pipeline for LLM applications with automated evaluation gates, baseline comparison, and PR-level quality reporting |
+| **Clinical Note Classifier** | [clinical-note-classifier](https://github.com/kavoshm/clinical-note-classifier) | 1 | LLM-powered triage classification with chain-of-thought reasoning, few-shot prompting, and structured JSON output |
+| **Mental Health RAG** | [mental-health-rag](https://github.com/kavoshm/mental-health-rag) | 2 | RAG system for querying clinical treatment protocols with citation-backed answers, ChromaDB retrieval, and FastAPI |
+| **Clinical Eval Framework** | [clinical-eval-framework](https://github.com/kavoshm/clinical-eval-framework) | 3 | Automated quality scoring for LLM clinical outputs using G-Eval with 4 rubrics, baseline management, and regression detection |
+| **Agentic Intake Pipeline** | [clinical-intake-pipeline](https://github.com/kavoshm/clinical-intake-pipeline) | 4 | Multi-agent extraction from clinical notes to FHIR R4 resources using LangGraph with human-in-the-loop validation |
+| **Clinical AI CI/CD** | [clinical-ai-cicd](https://github.com/kavoshm/clinical-ai-cicd) | 5 | CI/CD pipeline for LLM applications with automated evaluation gates, baseline comparison, and PR-level quality reporting |
 
 ### How the Projects Connect
 
@@ -157,10 +157,10 @@ The roadmap follows the real progression of the LangChain ecosystem, and each st
 **If you are evaluating this portfolio:**
 - Start with the [Featured Projects](#featured-projects) table above -- each links to a standalone repo with its own README, architecture, and results.
 - Browse the [project connections diagram](#how-the-projects-connect) to understand how the projects build on each other.
-- Read the [blog post](19-portfolio/blog-post/post.md) for a deep dive into the evaluation framework.
+- Read the [blog post](https://kavoshm.github.io/blog/llm-as-judge-healthcare.html) for a deep dive into the evaluation framework.
 
 **If you are following a similar learning path:**
-- Each numbered directory (`01-prompt-engineering` through `20-interview-prep`) contains a README, study notes, and working code examples.
+- Each module links to its own GitHub repository with a README, study notes, and working code examples.
 - The modules are ordered sequentially -- concepts in later modules depend on earlier ones.
 - Every code example is self-contained and can be read independently.
 
@@ -180,7 +180,7 @@ python scripts/generate_figures.py
 >
 > The post covers: why manual review fails, how G-Eval solves the "no gold standard" problem, 4 rubrics that work for healthcare, calibration challenges, honest failures, and 5 practical recommendations.
 
-Read the full post: [19-portfolio/blog-post/post.md](19-portfolio/blog-post/post.md)
+Read the full post: [kavoshm.github.io/blog/llm-as-judge-healthcare.html](https://kavoshm.github.io/blog/llm-as-judge-healthcare.html)
 
 ---
 
@@ -237,9 +237,9 @@ For someone following a similar path into AI for healthcare, here is what I woul
 - **LLMOps for Healthcare** -- CI/CD pipelines that treat prompt changes like code changes: versioned, tested, evaluated, and blocked on regression
 
 **Get in touch:**
-- **GitHub:** [kavoshmonfared](https://github.com/kavoshmonfared)
-- **LinkedIn:** [kavoshmonfared](https://linkedin.com/in/kavoshmonfared)
-- **Email:** kavosh.monfared@gmail.com
+- **GitHub:** [kavoshm](https://github.com/kavoshm)
+- **LinkedIn:** [kavoshm](https://linkedin.com/in/kavoshm)
+- **Email:** monfaredkavosh@gmail.com
 
 ---
 
