@@ -238,7 +238,7 @@ For someone following a similar path into AI for healthcare, here is what I woul
 
 **Get in touch:**
 - **GitHub:** [kavoshm](https://github.com/kavoshm)
-- **LinkedIn:** [kavoshm](https://linkedin.com/in/kavoshm)
+- **LinkedIn:** [Kavosh Monfared](https://www.linkedin.com/in/kavosh-m-5479063ba/)
 - **Email:** monfaredkavosh@gmail.com
 
 ---
